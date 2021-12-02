@@ -1,0 +1,3 @@
+- name: Wordpress
+  hosts: client1
+  vars:
