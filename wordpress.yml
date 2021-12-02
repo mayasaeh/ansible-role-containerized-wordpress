@@ -1,3 +1,12 @@
-- name: Wordpress
+- name: Install Wordpress
   hosts: client1
   vars:
+    role_path: /home/ansible/ansible-role-containerized-wordpress/roles
+  pre_tasks:
+    - name: Create user www-data
+      user:
+        name: www-data
+        group: www-data
+  roles:
+    - roles
+  become: yes
